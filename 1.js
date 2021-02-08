@@ -25,9 +25,10 @@ input1.addEventListener('keydown', function(event){
     
 });
 
-let sum = document.createElement('h3');
+
+let sum = document.querySelector('.h3');
 sum.innerText = 0;
-document.body.append(sum);
+
 let a = document.querySelector('#num1')
 let b = document.querySelector('#num2');
 let ninus = document.querySelector('.btn1');
@@ -41,7 +42,28 @@ plus.addEventListener('click', function(event){
 });
 ninus.addEventListener('click', function(event){
     sum.innerText = Number(a.value) - Number(b.value)
+});
+
+let h22 = document.createElement('h2');
+h22.innerText = '0';
+document.body.append(h22);
+let fo = document.querySelector('#two');
+let go = document.querySelector('#tree');
+
+let step = document.querySelector('.step');
+let ost = document.querySelector('.ost');
+let del = document.querySelector('.del');
+
+step.addEventListener('click', function(){
+    h22.innerText = Number(fo.value) ** Number(go.value)
+});
+ost.addEventListener('click', function(){
+    h22.innerText = Number(fo.value) % Number(go.value);
+});
+del.addEventListener('click', function(){
+    h22.innerText = Number(fo.value) / Number(go.value)
 })
+
 
 
 
